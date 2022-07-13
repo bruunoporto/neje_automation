@@ -21,11 +21,11 @@ total = 100
 is_running = False
 
 while True:
-
+                                                        #x    y    width height
     if pyautogui.locateOnScreen('complete.jpeg', region=(200, 903, 1389, 27) ,  confidence=0.8) != None:
         times_completed += 1
         time.sleep(20)
-    
+        print('achei o completo')
     print('ok')
 
     if times_completed == 2:
@@ -34,10 +34,12 @@ while True:
         total -= 1
         time.sleep(120)   
         is_running = False
+        print('completed')
 
     if times_completed == 0 and is_running == False and total>4:
-        pyautogui.click(1389, 534)
+        pyautogui.click(1389, 534) #the pixels of play button
         is_running = True
+        print('começando a printar')
 
 
 # while True:
