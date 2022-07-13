@@ -22,7 +22,7 @@ is_running = False
 
 while True:
 
-    if pyautogui.locateOnScreen('complete.jpeg', confidence=0.8) != None:
+    if pyautogui.locateOnScreen('complete.jpeg', region=(200, 903, 1389, 27) ,  confidence=0.8) != None:
         times_completed += 1
         time.sleep(20)
     
@@ -36,7 +36,7 @@ while True:
         is_running = False
 
     if times_completed == 0 and is_running == False and total>4:
-        # pyautogui.click(10, 50)
+        pyautogui.click(1389, 534)
         is_running = True
 
 
